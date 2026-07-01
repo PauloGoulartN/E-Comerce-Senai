@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Center | Meu Carrinho</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/carrinho.js" defer></script>
+</head>
+<body>
+
+    <header class="header-loja">
+        <div class="logo">
+            ⚽ <span>Sport Center</span>
+        </div>
+        
+        <div class="acoes-header">
+            <button class="btn-voltar-loja" onclick="window.location.href='vitrine.html'">
+                Voltar para a Loja 🏪
+            </button>
+        </div>
+    </header>
+
+    <main class="main-vitrine" style="max-width: 850px;">
+        <h2 style="margin-bottom: 20px; color: #0f172a;">Meu Carrinho 🛒</h2>
+
+        <ul id="lista-carrinho" style="list-style: none; padding: 0; margin: 0;">
+            </ul>
+
+        <div class="resumo-carrinho">
+            <h3>Total da Compra: <span id="valor-total-compra">R$ 0,00</span></h3>
+            <button id="btn-finalizar-compra">
+                Finalizar Compra ✔️
+            </button>
+        </div>
+    </main>
+
+</body>
+</html>

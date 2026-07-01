@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport Center | Painel Administrativo</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+
+<script src="js/produtos.js"></script>
+<script src="js/adm.js" defer></script>
+</head>
+<body>
+  <header class="header-admin navbar">
+    <div class="logo">⚙️ Sport Center | Painel Administrativo</div>
+    <nav class="nav-controles">
+      <span class="boas-vindas">Logado como: <strong>Diretoria</strong></span>
+      <a href="login.html" class="btn-sair">Sair (Logout)</a>
+    </nav>
+  </header>
+
+  <main class="main-admin">
+    <section class="container-cadastro-produto">
+      <h2>Nova Contratação (Cadastrar Produto)</h2>
+      
+      <form id="form-admin-produto">
+        <div class="grupo-input">
+  <label for="admin-nome-produto">Nome do Produto</label>
+  <input type="text" id="admin-nome-produto" required>
+</div>
+
+<div class="grupo-input">
+  <label for="admin-descricao-produto">Descrição</label>
+  <input
+    type="text"
+    id="admin-descricao-produto"
+    placeholder="Descrição do produto"
+    required>
+</div>
+
+<div class="grupo-input">
+  <label for="admin-preco-produto">Preço</label>
+  <input
+    type="number"
+    id="admin-preco-produto"
+    step="0.01"
+    required>
+</div>
+
+<div class="grupo-input">
+  <label for="admin-tamanhos-produto">Tamanhos</label>
+  <input
+    type="text"
+    id="admin-tamanhos-produto"
+    placeholder="P,M,G ou 35,36,37"
+    required>
+</div>
+
+<div class="grupo-input">
+  <label for="admin-img-produto">Imagem</label>
+  <input
+    type="text"
+    id="admin-img-produto"
+    placeholder="img/camisa-brasil.jpg"
+    required>
+</div>
+
+        <div class="grupo-input">
+          <label for="admin-img-produto">URL da Imagem:</label>
+          <input type="text" id="admin-img-produto" placeholder="Ex: img/bola.jpg" required>
+        </div>
+
+        <button type="submit" id="btn-salvar-produto" class="btn-primario">Salvar no Estoque</button>
+      </form>
+    </section>
+
+    <hr class="divisor-admin">
+
+    <section class="container-estoque">
+      <h2>Plantel Atual (Estoque)</h2>
+      
+      <table class="tabela-estoque">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Imagem</th>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="lista-admin-produtos">
+          <tr>
+            <td>1</td>
+            <td><img src="placeholder-chuteira.jpg" alt="Chuteira" width="40"></td>
+            <td>Chuteira Predator Campo</td>
+            <td>R$ 299,90</td>
+            <td>
+              <button class="btn-excluir" id="btn-excluir-1">🗑️ Remover</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
