@@ -3,6 +3,53 @@ let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 const lista = document.getElementById("lista-carrinho");
 const total = document.getElementById("valor-total-compra");
 
+// ======================
+// FUNÇÕES AUXILIARES
+// ======================
+
+function salvarCarrinho() {
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+}
+
+function formatarPreco(valor) {
+    return valor.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
+}
+
+function criarItemCarrinho(produto, indice) {
+    return `
+        <li class="item-carrinho">
+
+            <img src="${produto.imagem}" class="img-mini">
+
+            <div class="detalhes-item">
+                <h4>${produto.nome}</h4>
+                <p>Tamanho: ${produto.tamanho}</p>
+                <p>${formatarPreco(produto.preco)}</p>
+            </div>
+
+            <div class="controles-quantidade">
+                <button onclick="diminuir(${indice})">-</button>
+
+                <span>${produto.quantidade}</span>
+
+                <button onclick="aumentar(${indice})">+</button>
+            </div>
+
+            <button class="btn-remover" onclick="remover(${indice})">
+                🗑️ Remover
+            </button>
+
+        </li>
+    `;
+}
+
+// ======================
+// RENDERIZAÇÃO
+// ======================
+
 function renderizarCarrinho() {
 
     lista.innerHTML = "";
@@ -13,49 +60,21 @@ function renderizarCarrinho() {
 
         valorTotal += produto.preco * produto.quantidade;
 
-        lista.innerHTML += `
-
-        <li class="item-carrinho">
-
-            <img src="${produto.imagem}" class="img-mini">
-
-            <div class="detalhes-item">
-
-                <h4>${produto.nome}</h4>
-
-                <p>Tamanho: ${produto.tamanho}</p>
-
-                <p>R$ ${produto.preco.toFixed(2).replace(".",",")}</p>
-
-            </div>
-
-            <div class="controles-quantidade">
-
-                <button onclick="diminuir(${indice})">-</button>
-
-                <span>${produto.quantidade}</span>
-
-                <button onclick="aumentar(${indice})">+</button>
-
-            </div>
-
-            <button class="btn-remover" onclick="remover(${indice})">
-                🗑️ Remover
-            </button>
-
-        </li>
-
-        `;
+        lista.innerHTML += criarItemCarrinho(produto, indice);
 
     });
 
-    total.innerHTML = "R$ " + valorTotal.toFixed(2).replace(".",",");
+    total.textContent = formatarPreco(valorTotal);
 
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+    salvarCarrinho();
 
 }
 
-function aumentar(indice){
+// ======================
+// CONTROLES
+// ======================
+
+function aumentar(indice) {
 
     carrinho[indice].quantidade++;
 
@@ -63,7 +82,7 @@ function aumentar(indice){
 
 }
 
-function diminuir(indice){
+function diminuir(indice) {
 
     if (carrinho[indice].quantidade > 1) {
 
@@ -79,24 +98,30 @@ function diminuir(indice){
 
 }
 
-function remover(indice){
+function remover(indice) {
 
-    carrinho.splice(indice,1);
+    carrinho.splice(indice, 1);
 
     renderizarCarrinho();
 
 }
 
-document.getElementById("btn-finalizar-compra").addEventListener("click",function(){
+// ======================
+// FINALIZAR COMPRA
+// ======================
 
-    alert("Compra realizada com sucesso!");
+document
+    .getElementById("btn-finalizar-compra")
+    .addEventListener("click", function () {
 
-    carrinho = [];
+        alert("Compra realizada com sucesso!");
 
-    localStorage.removeItem("carrinho");
+        carrinho = [];
 
-    renderizarCarrinho();
+        localStorage.removeItem("carrinho");
 
-});
+        renderizarCarrinho();
+
+    });
 
 renderizarCarrinho();
