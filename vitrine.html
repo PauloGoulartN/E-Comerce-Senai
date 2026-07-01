@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Center | Vitrine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/produtos.js"></script>
+    <script src="js/vitrine.js" defer></script>
+</head>
+<body>
+
+    <header class="header-loja">
+        <div class="logo">
+            ⚽ <span>Sport Center</span>
+        </div> 
+
+        <nav class="menu-categorias">
+            <button class="categoria ativa" data-categoria="todos">Todos</button>
+            <button class="categoria" data-categoria="chuteira">Chuteiras</button>
+            <button class="categoria" data-categoria="camisa">Camisas</button>
+            <button class="categoria" data-categoria="short">Shorts</button>
+            <button class="categoria" data-categoria="bola">Bolas</button>
+            <button class="categoria" data-categoria="acessorios">Acessórios</button>
+        </nav>
+
+        <div class="acoes-header">
+            <div class="pesquisa">
+                <input type="text" id="campo-pesquisa" placeholder="Pesquisar produtos...">
+                <button id="btn-pesquisar">🔍</button>
+            </div>
+            <button class="btn-carrinho" onclick="window.location.href='carrinho.html'">
+                🛒 <span id="contador-carrinho" class="badge">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-vitrine">
+        <section id="grid-produtos" class="grid-vitrine">
+            </section>
+    </main>
+
+</body>
+</html>
