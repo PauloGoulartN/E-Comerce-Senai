@@ -65,9 +65,13 @@ function aumentar(indice){
 
 function diminuir(indice){
 
-    if(carrinho[indice].quantidade > 1){
+    if (carrinho[indice].quantidade > 1) {
 
         carrinho[indice].quantidade--;
+
+    } else {
+
+        carrinho.splice(indice, 1);
 
     }
 
