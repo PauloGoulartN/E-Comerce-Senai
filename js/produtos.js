@@ -6,7 +6,8 @@ let produtos = [
     descricao: "Mochila esportiva resistente com amplo espaço interno.",
     preco: 999.99,
     imagem: "img/mochila-legacy.webp",
-    tamanhos: ["Único"]
+    tamanhos: ["Único"],
+    categoria: "acessorios"
 },
 
 {
@@ -15,7 +16,8 @@ let produtos = [
     descricao: "Ideal para gramado sintético.",
     preco: 90.00,
     imagem: "img/chuteira-society.webp",
-    tamanhos: ["35","36","37","38","39","40"]
+    tamanhos: ["35","36","37","38","39","40"],
+    categoria: "chuteira"
 },
 
 {
@@ -24,7 +26,8 @@ let produtos = [
     descricao: "Modelo profissional para campo.",
     preco: 731.00,
     imagem: "img/chuteira-vinijr.jpg",
-    tamanhos: ["35","36","37","38","39","40"]
+    tamanhos: ["35","36","37","38","39","40"],
+    categoria: "chuteira"
 },
 
 {
@@ -33,7 +36,8 @@ let produtos = [
     descricao: "Bola oficial Nike Academy.",
     preco: 239.00,
     imagem: "img/bola-branca.jpg.avif",
-    tamanhos: ["Único"]
+    tamanhos: ["Único"],
+    categoria: "bola"
 },
 
 {
@@ -42,7 +46,8 @@ let produtos = [
     descricao: "Bola oficial Nike Academy.",
     preco: 249.00,
     imagem: "img/bola-amarela.jpg.avif",
-    tamanhos: ["Único"]
+    tamanhos: ["Único"],
+    categoria: "bola"
 },
 
 {
@@ -51,7 +56,8 @@ let produtos = [
     descricao: "Meião esportivo.",
     preco: 90.00,
     imagem: "img/meiao.jpg.avif",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "acessorios"
 },
 
 {
@@ -60,7 +66,8 @@ let produtos = [
     descricao: "Conforto para corrida.",
     preco: 208.00,
     imagem: "img/meia-trail.jpg.avif",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "acessorios"
 },
 
 {
@@ -69,7 +76,8 @@ let produtos = [
     descricao: "Proteção para partidas.",
     preco: 65.00,
     imagem: "img/caneleira.jpg.avif",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "acessorios"
 },
 
 {
@@ -78,7 +86,8 @@ let produtos = [
     descricao: "Luva profissional.",
     preco: 208.00,
     imagem: "img/luva-grip3.jpg.avif",
-    tamanhos: ["6","7","8","9"]
+    tamanhos: ["6","7","8","9"],
+    categoria: "acessorios"
 },
 
 {
@@ -87,7 +96,8 @@ let produtos = [
     descricao: "Short oficial.",
     preco: 319.00,
     imagem: "img/shorts-flamengo.webp",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "short"
 },
 
 {
@@ -96,7 +106,8 @@ let produtos = [
     descricao: "Calção oficial.",
     preco: 237.00,
     imagem: "img/calcao-sp.webp",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "short"
 },
 
 {
@@ -105,7 +116,8 @@ let produtos = [
     descricao: "Camisa oficial.",
     preco: 247.00,
     imagem: "img/camisa-brasil.jpg.avif",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "camisa"
 },
 
 {
@@ -114,7 +126,8 @@ let produtos = [
     descricao: "Camisa casual.",
     preco: 139.00,
     imagem: "img/camisa-flamengo-braziline.webp",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "camisa"
 },
 
 {
@@ -123,7 +136,8 @@ let produtos = [
     descricao: "Temporada 25/26.",
     preco: 359.00,
     imagem: "img/camisa-flamengo2.webp",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "camisa"
 },
 
 {
@@ -132,7 +146,8 @@ let produtos = [
     descricao: "Modelo azul.",
     preco: 449.00,
     imagem: "img/camisa-brasil-jordan.webp",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "camisa"
 },
 
 {
@@ -141,7 +156,8 @@ let produtos = [
     descricao: "Modelo jogador.",
     preco: 590.00,
     imagem: "img/camisa-sp3.webp",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "camisa"
 },
 
 {
@@ -150,7 +166,8 @@ let produtos = [
     descricao: "Modelo oficial.",
     preco: 569.00,
     imagem: "img/camisa-sp1.webp",
-    tamanhos: ["P","M","G"]
+    tamanhos: ["P","M","G"],
+    categoria: "camisa"
 },
 
 {
@@ -159,7 +176,8 @@ let produtos = [
     descricao: "Luva para goleiro.",
     preco: 195.00,
     imagem: "img/luvas-nike.jpg.avif",
-    tamanhos: ["6","7","8","9"]
+    tamanhos: ["6","7","8","9"],
+    categoria: "acessorios"
 },
 
 {
@@ -168,7 +186,8 @@ let produtos = [
     descricao: "Modelo profissional.",
     preco: 1049.90,
     imagem: "img/chuteira-kintsugi.webp",
-    tamanhos: ["35","36","37","38","39","40"]
+    tamanhos: ["35","36","37","38","39","40"],
+    categoria: "chuteira"
 }
 
 ];
@@ -178,13 +197,13 @@ function salvarProdutos() {
 }
 
 function carregarProdutos() {
-    const dados = localStorage.getItem("produtos");
 
-    if (dados) {
-        produtos = JSON.parse(dados);
-    } else {
-        salvarProdutos();
-    }
+    localStorage.removeItem("produtos");
+
+    salvarProdutos();
+
+    produtos = JSON.parse(localStorage.getItem("produtos"));
+
 }
 
 carregarProdutos();
