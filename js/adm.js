@@ -122,3 +122,17 @@ const novoProduto = {
     form.reset();
 
 });
+
+const btnSair = document.querySelector(".btn-sair");
+
+if (btnSair) {
+    btnSair.addEventListener("click", function(e) {
+        e.preventDefault();
+        
+        // Limpa quem estava logado
+        localStorage.removeItem("usuario_logado");
+        
+        // Manda de volta para a tela de login inicial
+        window.location.href = "index.html"; 
+    });
+}

@@ -1,3 +1,16 @@
+// ==========================================
+// CAPTURA E EXIBIÇÃO DO NOME DO USUÁRIO LOGADO
+// ==========================================
+// 1. Busca o nome que guardamos no navegador durante o login
+const usuarioLogado = localStorage.getItem("usuario_logado");
+
+// 2. Captura a tag <strong> onde está escrito "Torcedor"
+const elementoNome = document.getElementById("nome-usuario-logado");
+
+// 3. Se encontrou o usuário, troca o texto estático pelo nome real dele
+if (usuarioLogado && elementoNome) {
+    elementoNome.innerText = usuarioLogado;
+}
 const grid = document.getElementById("grid-produtos");
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
@@ -92,3 +105,17 @@ document.querySelectorAll(".categoria").forEach(botao => {
 // Inicialização
 renderizarProdutos();
 atualizarContadorCarrinho();
+
+const btnSair = document.querySelector(".btn-sair");
+
+if (btnSair) {
+    btnSair.addEventListener("click", function(e) {
+        e.preventDefault();
+        
+        // Limpa quem estava logado
+        localStorage.removeItem("usuario_logado");
+        
+        // Manda de volta para a tela de login inicial
+        window.location.href = "index.html"; 
+    });
+}
