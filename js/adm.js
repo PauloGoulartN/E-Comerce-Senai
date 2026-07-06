@@ -1,3 +1,11 @@
+// ==========================================================================
+// GUARDA DE SEGURANÇA: Bloqueia invasões diretas pela barra de endereços
+// ==========================================================================
+if (localStorage.getItem("usuario_logado") !== "Diretoria") {
+    alert("⚠️ Acesso não autorizado! Você precisa fazer o login da Diretoria primeiro.");
+    window.location.href = "index.html"; // Chuta o invasor de volta para o login
+}
+
 carregarProdutos();
 
 const form = document.getElementById("form-admin-produto");

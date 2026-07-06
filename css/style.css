@@ -369,6 +369,25 @@ body {
     background: #15803d;
 }
 
+#btnEsvaziar {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 12px;   
+    border-radius: 6px;   
+    font-weight: 100;     
+    font-size: 1rem;      
+    cursor: pointer;
+    margin-top: 15px;     
+    transition: 0.2s;
+    margin-left: 120px;
+}
+
+#btnEsvaziar:hover {
+    background: #b91c1c;
+}
+
+
 /* RESPONVISIDADE */
 @media (max-width: 900px) {
     .grid-vitrine { grid-template-columns: repeat(2, 1fr); }

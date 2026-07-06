@@ -44,5 +44,27 @@ formLogin.addEventListener("submit", function(e) {
         // Mostra a mensagem de erro na tela
         msgErroLogin.innerText = "Credenciais inválidas! A senha deve ter no mínimo 4 caracteres.";
         msgErroLogin.classList.remove("oculto");
-    }
+    } 
 });
+// ==========================================
+// 3. INTERCEPTANDO O LINK DA DIRETORIA (Bônus de Segurança)
+// ==========================================
+const linkAdmin = document.getElementById("link-admin");
+
+if (linkAdmin) {
+    linkAdmin.addEventListener("click", function(e) {
+        e.preventDefault(); // Impede o navegador de pular de página direto
+        
+        // Abre uma caixinha pop-up pedindo a senha
+        const senhaDigitada = prompt("Área Restrita da Diretoria!\nPor favor, digite a senha master do lider supremo:");
+
+        // Valida se a senha está correta
+        if (senhaDigitada === "admin123") {
+            localStorage.setItem("usuario_logado", "Diretoria");
+            window.location.href = "adm.html"; // Redireciona se acertar
+        } else if (senhaDigitada !== null) {
+            // Se ele digitou algo errado (e não apenas clicou em Cancelar)
+            alert("🚨 Acesso Negado! Senha incorreta.");
+        }
+    });
+}

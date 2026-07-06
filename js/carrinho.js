@@ -106,6 +106,10 @@ function remover(indice) {
 
 }
 
+document.getElementById("btnEsvaziar").addEventListener("click", function () {
+    localStorage.removeItem("carrinho");
+    location.reload();
+});
 // ======================
 // FINALIZAR COMPRA
 // ======================
