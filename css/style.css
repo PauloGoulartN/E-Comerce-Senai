@@ -676,3 +676,194 @@ h2 {
 #btn-login:active {
   transform: scale(0.98);
 }
+
+
+.header-admin {
+    background: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-controles {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.boas-vindas {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.boas-vindas strong {
+    color: #0f172a;
+}
+
+.btn-sair {
+    background: #fee2e2;
+    color: #ef4444;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.btn-sair:hover {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+/* CONTAINER PRINCIPAL DO ADMIN */
+.main-admin {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaçamento entre os blocos */
+}
+
+/* CAIXAS DE CONTEÚDO (FORMULÁRIO E TABELA) */
+.container-cadastro-produto, 
+.container-estoque {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.container-cadastro-produto h2, 
+.container-estoque h2 {
+    font-size: 1.4rem;
+    color: #0f172a;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+/* FORMULÁRIO EM GRID */
+#form-admin-produto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Divide em 2 colunas */
+    gap: 15px 25px;
+}
+
+/* Nota: A classe .grupo-input já existe no seu CSS do login e vai funcionar perfeitamente aqui! */
+
+/* O botão de salvar deve ocupar as duas colunas */
+.btn-primario {
+    grid-column: 1 / -1; 
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-primario:hover {
+    background: #15803d;
+}
+
+/* LINHA DIVISÓRIA */
+.divisor-admin {
+    border: 0;
+    height: 1px;
+    background: #cbd5e1;
+    margin: 10px 0;
+}
+
+/* =================================================
+   TABELA DE ESTOQUE
+   ================================================= */
+.tabela-estoque {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.tabela-estoque th, 
+.tabela-estoque td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.tabela-estoque th {
+    background: #f8fafc;
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tabela-estoque td {
+    font-size: 0.95rem;
+}
+
+/* Ajuste na miniatura da imagem na tabela */
+.tabela-estoque img {
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+}
+
+/* Botão Excluir da Tabela */
+.btn-excluir {
+    background: #fee2e2;
+    color: #ef4444;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-excluir:hover {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+/* RESPONSIVIDADE DO ADMIN */
+@media (max-width: 768px) {
+    #form-admin-produto {
+        grid-template-columns: 1fr; /* Volta para 1 coluna no celular */
+    }
+    
+    .header-admin {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .tabela-estoque {
+        display: block;
+        overflow-x: auto; /* Permite rolar a tabela no celular */
+        white-space: nowrap;
+    }
+}
