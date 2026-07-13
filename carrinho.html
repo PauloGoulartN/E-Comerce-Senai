@@ -29,6 +29,14 @@
 
         <div class="resumo-carrinho">
             <h3>Total da Compra: <span id="valor-total-compra">R$ 0,00</span></h3>
+            <div class="linha-resumo pagamento">
+            <label for="select-pagamento">Forma de Pagamento:</label>
+            <select id="select-pagamento" class="input-moderno">
+                <option value="pix">PIX (Aprovação imediata)</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="boleto">Boleto Bancário</option>
+            </select>
+            </div>
             <button id="btnEsvaziar">🗑️ Esvaziar Carrinho</button>
             <button id="btn-finalizar-compra">
                 Finalizar Compra ✔️
