@@ -116,7 +116,7 @@ document.getElementById("btnEsvaziar").addEventListener("click", function () {
 
 document
     .getElementById("btn-finalizar-compra")
-    // ==========================================================================
+// ==========================================================================
 // FINALIZANDO A COMPRA COM O POLIMORFISMO
 // ==========================================================================
 document.getElementById("btn-finalizar-compra").addEventListener("click", () => {
@@ -144,9 +144,6 @@ document.getElementById("btn-finalizar-compra").addEventListener("click", () => 
         pagamento = new PagamentoBoleto();
     }
 
-    // A MÁGICA ACONTECE AQUI:
-    // O sistema não sabe e não se importa qual é o objeto. 
-    // Ele apenas chama o método processar() e a classe correta responde!
     const sucesso = pagamento.processar(valorTotal);
 
     if (sucesso) {
